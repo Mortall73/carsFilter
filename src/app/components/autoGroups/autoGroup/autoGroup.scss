@@ -1,0 +1,41 @@
+@import './autoList/autoList.scss';
+
+$bpXLg: 1200px;
+$bpLg: 992px;
+$bpMd: 768px;
+$bpSm: 576px;
+
+.auto_groups {
+    margin-top: 40px;
+}
+.auto-group {
+    width: 33.333333%;
+    padding: 0 10px;
+    padding-bottom: 30px;
+
+    @media screen and (max-width: $bpMd) {
+        width: 50%;
+    }
+    @media screen and (max-width: $bpSm) {
+        width: 100%;
+        column-count: 2;
+        padding-bottom: 40px;
+    }
+}
+.auto-group__title {
+    position: absolute;
+    top:0;
+    left: -20px;
+    font-size: 28px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: $orange;
+
+    @media screen and (max-width: $bpSm) {
+        top: -40px;
+        left: 0;
+        right: 0;
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+    }
+}

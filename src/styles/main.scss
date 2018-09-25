@@ -1,0 +1,37 @@
+$bpXL: 1200px;
+$bpLg: 992px;
+$bpMd: 768px;
+$bpSm: 576px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 16px;
+}
+.container {
+    max-width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    @media screen and (max-width: $bpXL) {
+        max-width: 960px;
+    }
+    @media screen and (max-width: $bpLg) {
+        max-width: 720px;
+    }
+    @media screen and (max-width: $bpMd) {
+        max-width: 540px;
+    }
+    @media screen and (max-width: $bpSm) {
+        max-width:100%;
+    }
+}
+h1 {
+    font-size: 19px;
+    font-weight: 400;
+}
+@import "../app/components/autoGroups/autoGroups.scss";

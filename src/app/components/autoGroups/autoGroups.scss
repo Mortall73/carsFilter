@@ -1,0 +1,8 @@
+@import './search/search.scss';
+@import './autoGroup/autoGroup.scss';
+
+.preloader {
+    background: url(../../../images/preloader.gif) center no-repeat;
+    min-height: 250px;
+    width: 100%;
+}
