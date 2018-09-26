@@ -1,15 +1,20 @@
 'use strict'
 
 const { VueLoaderPlugin } = require('vue-loader');
+const MinifyPlugin = require("babel-minify-webpack-plugin");
 const path = require('path');
+const webpack = require("webpack");
 
 module.exports = {
-    mode: 'development',
-    devtool: 'eval',
-    entry: './src/app/app.js',
+    mode: 'production',
+    devtool: 'source-map',
+    entry: ["@babel/polyfill",'./src/app/app.js'],
     output: {
         path: path.resolve(__dirname, './src'),
         filename: 'all.js'
+    },
+    optimization: {
+        minimize: true
     },
     resolve: {
         alias: {
@@ -23,8 +28,15 @@ module.exports = {
                 use: [
                     'vue-loader'
                 ]
+            },
+            {
+                test: /.js$/,
+                use: 'babel-loader'
             }
         ]
     },
-    plugins: [ new VueLoaderPlugin() ]
+    plugins: [ 
+        new VueLoaderPlugin(),
+        new MinifyPlugin({}, {sourceMap: null})
+    ]
 }

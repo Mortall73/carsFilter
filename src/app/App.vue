@@ -11,5 +11,5 @@ export default {
     components: {
         autoGroups
     }
-}
+} 
 </script>

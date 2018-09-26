@@ -9,6 +9,7 @@
   "author": "Vlad",
   "license": "ISC",
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "axios": "^0.18.0",
     "lodash": "^4.17.10",
     "vue": "^2.5.17",
@@ -16,8 +17,14 @@
     "webpack": "^4.17.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-es2015": "^7.0.0-beta.53",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.2",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "babel-plugin-eval": "^1.0.1",
+    "babel-plugin-transform-eval": "^6.22.0",
     "browser-sync": "^2.24.7",
     "css-loader": "^1.0.0",
     "del": "^3.0.0",
@@ -29,6 +36,7 @@
     "gulp-sass": "^4.0.1",
     "gulp-util": "^3.0.8",
     "sass-loader": "^7.1.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
     "vue-loader": "^15.4.1",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.5.17"
